@@ -27,10 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.backgroundColor = 'black';
             para.style.color = 'white';
             heading.style.color = 'white';
+            resetGame();
+            stat.textContent = "🌀 Twist Mode ON: Each player keeps only 3 moves. Oldest will disappear!";
+
         } else {
             document.body.style.backgroundColor = 'white';
             para.style.color = 'black';
             heading.style.color = 'black';
+            resetGame();
+            stat.textContent = "";
         }
     });
     resetButton.addEventListener('click', resetGame);

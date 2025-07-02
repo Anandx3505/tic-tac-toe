@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const heading = document.querySelector('h1');
     const para = document.querySelector('p');
+    const labell = document.querySelector('label');
 
 
     twistOn.addEventListener('change', function () {
@@ -28,12 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
             para.style.color = 'white';
             heading.style.color = 'white';
             resetGame();
+            labell.title = "Click for normal mode";
             stat.textContent = "🌀 Twist Mode ON: Each player keeps only 3 moves. Oldest will disappear!";
 
         } else {
             document.body.style.backgroundColor = 'white';
             para.style.color = 'black';
             heading.style.color = 'black';
+            labell.title = "Click for twist mode🌀";
             resetGame();
             stat.textContent = "";
         }

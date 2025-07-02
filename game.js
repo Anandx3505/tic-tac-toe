@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         j = 'X';
         stat.textContent = '';
+        flag = false;
     }
     function drawGame(){
         if(gameBoard.includes(0) === false && stat.textContent === ''){

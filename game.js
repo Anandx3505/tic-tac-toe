@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let j = 'X';
 
+    let flag = false;
+
     const cells = document.querySelectorAll('.cell');
     const stat = document.getElementById('status');
     const resetButton = document.getElementById('reset');
@@ -16,12 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function handleClick(e) {
+        if(flag) return;
+
         const index = e.target.dataset.index;
         if (gameBoard[index] === 0) {
             gameBoard[index] = j;
             e.target.textContent = j;
             if (checkWin(gameBoard, j)) {
                 stat.textContent = j + " Wins!";
+                flag = true;
             }
             else {
                 drawGame();
@@ -57,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function drawGame(){
         if(gameBoard.includes(0) === false && stat.textContent === ''){
             stat.textContent = "It's a draw!";
+            flag = true;
         }
     }
 });

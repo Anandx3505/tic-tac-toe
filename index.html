@@ -13,6 +13,15 @@
         <span class="slider"></span>
     </label>
     <h1>Tic-Tac-Toe</h1>
+    <div class="mode-selector">
+        <button id="pvp-mode" class="mode-btn active">Player vs Player</button>
+        <button id="ai-mode" class="mode-btn">Player vs AI</button>
+    </div>
+    <div class="difficulty-selector" id="difficulty-selector" style="display: none;">
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn active" data-difficulty="hard">Hard</button>
+    </div>
     <div id="board">
         <div class="cell" data-index="0"></div>
         <div class="cell" data-index="1"></div>
@@ -25,6 +34,10 @@
         <div class="cell" data-index="8"></div>
     </div>
     <p id="status"></p>
+    <div class="game-stats" id="game-stats" style="display: none;">
+        <span id="move-count">Moves: 0</span>
+        <span id="win-record">W: 0 | D: 0 | L: 0</span>
+    </div>
     <button id="reset">Reset Game</button>
     <script src="game.js"></script>
 </body>

@@ -4,6 +4,101 @@ body{
     text-align: center;
     margin-top: 50px;
 }
+
+.mode-selector {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid #333;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.mode-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.mode-btn.active {
+    background-color: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+
+.difficulty-selector {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.difficulty-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+    border: 1px solid #666;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+
+.difficulty-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.difficulty-btn.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.game-stats {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.game-stats span {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.cell {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+@keyframes ai-thinking {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.ai-thinking {
+    animation: ai-thinking 0.6s ease-in-out infinite;
+}
+
+@keyframes winning-cell {
+    0%, 100% { background-color: white; }
+    50% { background-color: #4CAF50; }
+}
+
+.winning-cell {
+    animation: winning-cell 0.5s ease-in-out 3;
+    background-color: #90EE90 !important;
+}
 #board{
     display: grid;
     grid-template-columns: repeat(3, 100px);

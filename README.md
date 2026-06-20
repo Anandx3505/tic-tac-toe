@@ -61,7 +61,3 @@ When playing vs AI, wins/draws/losses are saved to `localStorage` and shown in t
 ## 📝 License
 
 This project has no license file. Add one (for example, `MIT`) if you plan to publish or share it.
-
----
-
-If you want, I can also: add a `LICENSE` file, create a small `package.json`, or update the UI text in `index.html` to improve clarity. ✅
